@@ -33,8 +33,8 @@
             a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
             a:hover { border-bottom-style: solid; color: black; }
             ul { margin: 0 0 32px 17px; }
-            #objective { width: 500px; float: left; }
-            #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+            #objective { width: 800px; float: left; }
+            #objective p { font-family: Georgia, Serif; font-style: none; color: #666; }
             dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
             dd { width: 600px; float: right; }
             dd.clear { float: none; margin: 0; height: 15px; }
@@ -46,7 +46,6 @@
 
     <div id="page-wrap">
     
-        <img src="images/cthulu.png" alt="Photo of Cthulu" id="pic" />
     
         <div id="contact-info" class="vcard">
         
@@ -55,86 +54,52 @@
             <h1 class="fn">Grace Chan Hui Yan</h1>
         
             <p>
-                Mobile: <span class="tel">+65 9628 6299</span><br />
-                Email: <a class="email" href="http://gc0310.github.io/game">gc0310.github.io/game</a>
+                Student ID: <span class="tel">A0112950N</span><br />
+                Final Game: <a class="email" href="http://gc0310.github.io/finalproject/">Feed Tubbs!</a>
             </p>
         </div>
                 
         <div id="objective">
             <p>
-                I am an outgoing and energetic (ask anybody) young professional, seeking a 
-                career that fits my professional skills, personality, and murderous tendencies. 
-                My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
-                I can bring world domination to your organization. 
+Feed Tubbs was inspired by an app called ‘Neko Atsume’, which allows the user to feed cats. This is an adaptation of the clicker game we did in class as I thought I could improve on the previous game by adding new elements to the game. A live game time display, including a live score board was added so that users can see their progress. 
+<p>
+
+So I designed the game where objects would be moving around the board, and the player would have to click on the target object in order to score points. There are two types of objects the player could click on, one was the ‘Sushi’ - which earned the player points, while the other was ‘Canned Food’ - which deducted points from the player’s overall score. The ‘Canned Food’ was added to make it more challenging for the user to click on the ’Sushi’. The objective of the game was to get players to score as high as possible. 
+
+<p>
+Instead of using Javascript to create squares and circles as my target objects, I used images which gave me more control over the design, as well as to make the game look more consistent as I could source for images on my own. The images were obtained via Google, and I used Photoshop and Illustrator respectively to edit them for it to fit the game. I used an image for my start button, which I gave an event listener to so that when it is clicked, it will initialise the start function. The start function included a prompt which invited the user to type in their desired difficulty level. If the user typed in any other number than the ones given (1, 2, 3), the game will be set to the lowest level. 
+
+<p>
+The if conditional was used to set the various difficulty levels. As each difficulty level increased, the speed at which the target object was increased, along with the number of distracting objects.  Each moving object had a ‘move’ function, which was called every 1/100th of a second. This allowed each object to be moved across the board smoothly. 
+
+<p>
+On the front page, I made the two icons rotate to make the game look more interactive. I adapted what we learnt from the ‘Draw Smiley Face’ assignment, which required us to animate the path from a set point. For this assignment, I used the animation to rotate the images, and I made a function for each image. This function was called every 2 seconds to make the animation continue forever. 
+
+<p>
+I made 6 individual ‘Canned Food’ objects, and this allowed me to initialize their rates individually. Each can had their own ‘moveCan’ function, which was written with ‘if’ conditions so that the object wouldn’t move out of the board. 
+
+<p>
+I created a function ‘randInt’, which used the ‘Math.random()’ Javascript function to generate a random number. This was used to give the objects random X and Y coordinates. This also ensured that each object had a distinct path from the other and there were no overlaps. 
+
+<p>
+The game was intended to run for 15 seconds, however, due to the delay in the live timer display, the user will only see it when it starts counting down from 14. Hence, I set the game to run for 16 seconds, which gives users a clearer view on how long they’ve left in the game. 
+
+<p>
+I got my sounds from YouTube (https://www.youtube.com/watch?v=OmSQuxbDwVE), where I downloaded the video and converted it to mp3. I got my sound effects from this website http://taira-komori.jpn.org/game01en.html, and when a click was made on the ‘Sushi’ (the correct target object), a sound would be made to tell the user it was registered. In contrast, if a click was made on the ‘Canned Food’ (the wrong target object), a bloop sound would be made to signify that the score was deducted. 
+
+<p>
+In retrospect, I could have created a function which made the objects move in a different direction when clicked. This would’ve made the game slightly more challenging, and more interesting for the player as well. I could have created a function which changed the target image when clicked using arrays. However, I encountered a lot of difficulty in doing so, and I could not get it to move in a similar manner as static images. 
+
+<p>
+Overall, I found this module to be very insightful. I definitely learned a lot, though the learning curve was very steep. I enjoyed the challenges presented to us in class, and it was very fulfilling to be able to solve them. Also, the video walkthroughs provided certainly helped us to be more familiar with the terminology.
+
+<p>
+Thank you, and I hope you enjoyed the game! 
+
+
             </p>
         </div>
         
-        <div class="clear"></div>
-        
-        <dl>
-            <dd class="clear"></dd>
-            
-            <dt>Education</dt>
-            <dd>
-                <h2>National University of Singapore</h2>
-                <p><strong>Major:</strong> New Media & Communications <br />
-                  Modules taken:<br>
-                    <li>  Topics on Social Media Communication </li>
-                    <li>  Corporate Social Responsibility: Research and Practice </li>
-                    <li>  Design for Strategic Communications </li>
-                    <li>  Writing for Communication Management </li>
-                    <li>  Advertising Strategies </li>
-                    <li>  Computational Media Literacy </li>
-                    <li>  Marketing </li>
- </p>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Skills</dt>
-            <dd>
-                <h2>Office skills</h2>
-                <p>Office and records management, database administration, event organization, customer support, travel coordination</p>
-                
-                <h2>Computer skills</h2>
-                <p>Microsoft productivity software (Word, Excel, etc), Adobe Creative Suite, Windows</p>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Experience</dt>
-            <dd>
-                <h2>ResearchBooksAsia <span>Part-Timer - Aug - Oct 2015, Jun - Jul 2014</span></h2>
-                <ul>
-                    <li>Inspired and won highest peasant death competition among servants</li>
-                    <li>Helped coordinate managers to grow cult following</li>
-                    <li>Provided untimely deaths to all who opposed</li>
-                </ul>
-                
-                <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
-                <ul>
-                    <li>Worked on grass-roots promotional campaigns</li>
-                    <li>Reduced theft and property damage percentages</li>
-                    <li>Janitorial work, Laundry</li>
-                </ul> 
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Hobbies</dt>
-            <dd>World Domination, Deep Sea Diving, Murder Most Foul</dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>References</dt>
-            <dd>Available on request</dd>
-            
-            <dd class="clear"></dd>
-        </dl>
-        
-        <div class="clear"></div>
-    
-    </div>
 
 </body>
 
